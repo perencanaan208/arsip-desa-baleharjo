@@ -2,11 +2,11 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-  background:#f1f5f9;
+  background:#eef2f7;
 }
 
 .container{
@@ -14,7 +14,6 @@ body{
   min-height:100vh;
 }
 
-/* SIDEBAR */
 .sidebar{
   width:280px;
   background:#065f46;
@@ -22,133 +21,171 @@ body{
   padding:30px 20px;
 }
 
-.logo h2{
-  font-size:30px;
+.logo h1{
+  font-size:42px;
   margin-bottom:10px;
 }
 
 .logo p{
-  margin-bottom:8px;
-  line-height:1.5;
+  font-size:20px;
+  margin-bottom:10px;
 }
 
 .logo span{
-  font-size:14px;
+  font-size:18px;
 }
 
 .menu{
-  list-style:none;
-  margin-top:40px;
+  margin-top:50px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
 }
 
-.menu li{
-  padding:15px;
-  margin-bottom:10px;
-  border-radius:12px;
+.menu-btn{
+  border:none;
+  background:transparent;
+  color:white;
+  font-size:24px;
+  padding:18px;
+  border-radius:14px;
   cursor:pointer;
+  text-align:left;
   transition:0.3s;
 }
 
-.menu li:hover,
-.menu li.active{
+.menu-btn:hover{
+  background:white;
+  color:#065f46;
+}
+
+.active{
   background:white;
   color:#065f46;
   font-weight:bold;
 }
 
-/* MAIN */
-.main-content{
+.content{
   flex:1;
   padding:40px;
 }
 
-.content{
+.page{
   display:none;
 }
 
-.active-content{
+.active-page{
   display:block;
 }
 
-h1{
+h2{
+  font-size:48px;
   margin-bottom:30px;
   color:#1e293b;
 }
 
-/* DASHBOARD */
-.cards{
+.stats{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+  gap:25px;
 }
 
 .card{
+  background:white;
   padding:30px;
   border-radius:20px;
-  color:white;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-.green{
-  background:#059669;
+.card h3{
+  font-size:32px;
+  margin-bottom:15px;
+  color:#065f46;
 }
 
-.blue{
-  background:#2563eb;
+.card p{
+  font-size:20px;
 }
 
-.orange{
-  background:#ea580c;
-}
-
-/* ACTIVITY */
-.activity{
+.activity-card{
   background:white;
-  padding:25px;
+  padding:30px;
+  margin-bottom:30px;
   border-radius:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.activity-card h3{
+  font-size:30px;
   margin-bottom:25px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  color:#0f172a;
 }
 
-.activity h3{
-  margin-bottom:20px;
-  color:#1e293b;
-}
-
-.activity label{
+label{
   display:block;
-  margin-top:15px;
-  margin-bottom:8px;
-  color:#475569;
-}
-
-.activity select,
-.activity input{
-  width:100%;
-  padding:12px;
-  border:1px solid #cbd5e1;
-  border-radius:10px;
-}
-
-.buttons{
   margin-top:20px;
-  display:flex;
-  gap:10px;
+  margin-bottom:10px;
+  font-size:20px;
 }
 
-button{
-  padding:12px 20px;
-  border:none;
-  border-radius:10px;
+select,
+input[type=file]{
+  width:100%;
+  padding:16px;
+  border-radius:12px;
+  border:1px solid #cbd5e1;
+  font-size:18px;
+}
+
+.button-group{
+  margin-top:25px;
+  display:flex;
+  gap:15px;
+}
+
+.save-btn{
   background:#065f46;
   color:white;
+  border:none;
+  padding:14px 28px;
+  border-radius:12px;
   cursor:pointer;
-  font-weight:bold;
+  font-size:18px;
 }
 
-.secondary{
+.view-btn{
   background:#2563eb;
+  color:white;
+  border:none;
+  padding:14px 28px;
+  border-radius:12px;
+  cursor:pointer;
+  font-size:18px;
 }
 
-button:hover{
-  opacity:0.9;
+.save-btn:hover{
+  background:#047857;
+}
+
+.view-btn:hover{
+  background:#1d4ed8;
+}
+
+@media(max-width:900px){
+
+  .container{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    width:100%;
+  }
+
+  h2{
+    font-size:34px;
+  }
+
+  .menu-btn{
+    font-size:20px;
+  }
 }

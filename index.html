@@ -8,8 +8,179 @@
 </head>
 <body>
 
-  <h1>Arsip Digital Desa Baleharjo</h1>
+<div class="container">
 
-  <script src="script.js"></script>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">
+      <h2>Arsip Digital</h2>
+      <p>Kaup Perencanaan Desa Baleharjo</p>
+      <span>Admin : REDI</span>
+    </div>
+
+    <ul class="menu">
+      <li class="active" onclick="showMenu('dashboard', this)">Dashboard</li>
+      <li onclick="showMenu('rpjm', this)">RPJMDes</li>
+      <li onclick="showMenu('rkp', this)">RKPDes</li>
+      <li onclick="showMenu('apb', this)">APBDes</li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="content active-content">
+      <h1>Dashboard Arsip Desa</h1>
+
+      <div class="cards">
+        <div class="card green">
+          <h3>RPJMDes</h3>
+          <p>Dokumen dan Foto Kegiatan</p>
+        </div>
+
+        <div class="card blue">
+          <h3>RKPDes</h3>
+          <p>Dokumen dan Foto Kegiatan</p>
+        </div>
+
+        <div class="card orange">
+          <h3>APBDes</h3>
+          <p>Dokumen dan Foto Kegiatan</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RPJM -->
+    <section id="rpjm" class="content">
+      <h1>RPJMDes</h1>
+
+      <div class="activity">
+        <h3>Penyelenggaraan Musdes tentang perencanaan Desa</h3>
+
+        <select>
+          <option>2026</option>
+          <option>2025</option>
+        </select>
+
+        <label>Upload PDF</label>
+        <input type="file" accept=".pdf">
+
+        <label>Upload Foto</label>
+        <input type="file" accept="image/*" multiple>
+
+        <div class="buttons">
+          <button>Simpan</button>
+          <button class="secondary">Lihat Dokumen</button>
+        </div>
+      </div>
+
+      <div class="activity">
+        <h3>Dokumen Perdes</h3>
+
+        <select>
+          <option>2026</option>
+          <option>2025</option>
+        </select>
+
+        <label>Upload PDF</label>
+        <input type="file" accept=".pdf">
+
+        <div class="buttons">
+          <button>Simpan</button>
+          <button class="secondary">Lihat Dokumen</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RKP -->
+    <section id="rkp" class="content">
+      <h1>RKPDes</h1>
+
+      <div class="activity">
+        <h3>Musyawarah Desa perencanaan pembangunan tahunan</h3>
+
+        <select>
+          <option>2026</option>
+          <option>2025</option>
+        </select>
+
+        <label>Upload PDF</label>
+        <input type="file" accept=".pdf">
+
+        <label>Upload Foto</label>
+        <input type="file" accept="image/*" multiple>
+
+        <div class="buttons">
+          <button>Simpan</button>
+          <button class="secondary">Lihat Dokumen</button>
+        </div>
+      </div>
+
+      <div class="activity">
+        <h3>Dokumen Perdes</h3>
+
+        <select>
+          <option>2026</option>
+          <option>2025</option>
+        </select>
+
+        <label>Upload PDF</label>
+        <input type="file" accept=".pdf">
+
+        <div class="buttons">
+          <button>Simpan</button>
+          <button class="secondary">Lihat Dokumen</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- APB -->
+    <section id="apb" class="content">
+      <h1>APBDes</h1>
+
+      <div class="activity">
+        <h3>Penyusunan Rancangan Peraturan Desa tentang APB Desa</h3>
+
+        <select>
+          <option>2026</option>
+          <option>2025</option>
+        </select>
+
+        <label>Upload PDF</label>
+        <input type="file" accept=".pdf">
+
+        <label>Upload Foto</label>
+        <input type="file" accept="image/*" multiple>
+
+        <div class="buttons">
+          <button>Simpan</button>
+          <button class="secondary">Lihat Dokumen</button>
+        </div>
+      </div>
+
+      <div class="activity">
+        <h3>Dokumen Perdes</h3>
+
+        <select>
+          <option>2026</option>
+          <option>2025</option>
+        </select>
+
+        <label>Upload PDF</label>
+        <input type="file" accept=".pdf">
+
+        <div class="buttons">
+          <button>Simpan</button>
+          <button class="secondary">Lihat Dokumen</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

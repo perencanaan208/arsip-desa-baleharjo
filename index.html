@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arsip Digital Desa Baleharjo</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
 <div class="container">
 
-  <!-- SIDEBAR -->
+  <!-- Sidebar -->
   <aside class="sidebar">
     <div class="logo">
-      <h2>Arsip Digital</h2>
+      <h1>Arsip Digital</h1>
       <p>Kaup Perencanaan Desa Baleharjo</p>
       <span>Admin : REDI</span>
     </div>
 
-    <ul class="menu">
-      <li class="active" onclick="showMenu('dashboard', this)">Dashboard</li>
-      <li onclick="showMenu('rpjm', this)">RPJMDes</li>
-      <li onclick="showMenu('rkp', this)">RKPDes</li>
-      <li onclick="showMenu('apb', this)">APBDes</li>
-    </ul>
+    <nav class="menu">
+      <button class="menu-btn active" onclick="showPage('dashboard')">Dashboard</button>
+      <button class="menu-btn" onclick="showPage('rpjm')">RPJMDes</button>
+      <button class="menu-btn" onclick="showPage('rkp')">RKPDes</button>
+      <button class="menu-btn" onclick="showPage('apb')">APBDes</button>
+    </nav>
   </aside>
 
-  <!-- MAIN -->
-  <main class="main-content">
+  <!-- Content -->
+  <main class="content">
 
-    <!-- DASHBOARD -->
-    <section id="dashboard" class="content active-content">
-      <h1>Dashboard Arsip Desa</h1>
+    <!-- Dashboard -->
+    <section id="dashboard" class="page active-page">
+      <h2>Dashboard Arsip Desa</h2>
 
-      <div class="cards">
-        <div class="card green">
+      <div class="stats">
+        <div class="card">
           <h3>RPJMDes</h3>
           <p>Dokumen dan Foto Kegiatan</p>
         </div>
 
-        <div class="card blue">
+        <div class="card">
           <h3>RKPDes</h3>
           <p>Dokumen dan Foto Kegiatan</p>
         </div>
 
-        <div class="card orange">
+        <div class="card">
           <h3>APBDes</h3>
           <p>Dokumen dan Foto Kegiatan</p>
         </div>
@@ -52,129 +52,24 @@
     </section>
 
     <!-- RPJM -->
-    <section id="rpjm" class="content">
-      <h1>RPJMDes</h1>
+    <section id="rpjm" class="page">
+      <h2>RPJMDes</h2>
 
-      <div class="activity">
-        <h3>Penyelenggaraan Musdes tentang perencanaan Desa</h3>
-
-        <select>
-          <option>2026</option>
-          <option>2025</option>
-        </select>
-
-        <label>Upload PDF</label>
-        <input type="file" accept=".pdf">
-
-        <label>Upload Foto</label>
-        <input type="file" accept="image/*" multiple>
-
-        <div class="buttons">
-          <button>Simpan</button>
-          <button class="secondary">Lihat Dokumen</button>
-        </div>
-      </div>
-
-      <div class="activity">
-        <h3>Dokumen Perdes</h3>
-
-        <select>
-          <option>2026</option>
-          <option>2025</option>
-        </select>
-
-        <label>Upload PDF</label>
-        <input type="file" accept=".pdf">
-
-        <div class="buttons">
-          <button>Simpan</button>
-          <button class="secondary">Lihat Dokumen</button>
-        </div>
-      </div>
+      <div id="rpjm-container"></div>
     </section>
 
     <!-- RKP -->
-    <section id="rkp" class="content">
-      <h1>RKPDes</h1>
+    <section id="rkp" class="page">
+      <h2>RKPDes</h2>
 
-      <div class="activity">
-        <h3>Musyawarah Desa perencanaan pembangunan tahunan</h3>
-
-        <select>
-          <option>2026</option>
-          <option>2025</option>
-        </select>
-
-        <label>Upload PDF</label>
-        <input type="file" accept=".pdf">
-
-        <label>Upload Foto</label>
-        <input type="file" accept="image/*" multiple>
-
-        <div class="buttons">
-          <button>Simpan</button>
-          <button class="secondary">Lihat Dokumen</button>
-        </div>
-      </div>
-
-      <div class="activity">
-        <h3>Dokumen Perdes</h3>
-
-        <select>
-          <option>2026</option>
-          <option>2025</option>
-        </select>
-
-        <label>Upload PDF</label>
-        <input type="file" accept=".pdf">
-
-        <div class="buttons">
-          <button>Simpan</button>
-          <button class="secondary">Lihat Dokumen</button>
-        </div>
-      </div>
+      <div id="rkp-container"></div>
     </section>
 
     <!-- APB -->
-    <section id="apb" class="content">
-      <h1>APBDes</h1>
+    <section id="apb" class="page">
+      <h2>APBDes</h2>
 
-      <div class="activity">
-        <h3>Penyusunan Rancangan Peraturan Desa tentang APB Desa</h3>
-
-        <select>
-          <option>2026</option>
-          <option>2025</option>
-        </select>
-
-        <label>Upload PDF</label>
-        <input type="file" accept=".pdf">
-
-        <label>Upload Foto</label>
-        <input type="file" accept="image/*" multiple>
-
-        <div class="buttons">
-          <button>Simpan</button>
-          <button class="secondary">Lihat Dokumen</button>
-        </div>
-      </div>
-
-      <div class="activity">
-        <h3>Dokumen Perdes</h3>
-
-        <select>
-          <option>2026</option>
-          <option>2025</option>
-        </select>
-
-        <label>Upload PDF</label>
-        <input type="file" accept=".pdf">
-
-        <div class="buttons">
-          <button>Simpan</button>
-          <button class="secondary">Lihat Dokumen</button>
-        </div>
-      </div>
+      <div id="apb-container"></div>
     </section>
 
   </main>
